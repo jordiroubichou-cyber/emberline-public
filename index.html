@@ -275,7 +275,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .gate label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
 .gate input[type=text],.gate input[type=email]{width:100%;height:50px;border-radius:14px;border:1px solid rgba(23,19,15,.16);background:#fff;padding:0 16px;font:16px Inter,sans-serif;color:var(--encre);margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
 .gate input:focus{outline:0;border-color:var(--braise);box-shadow:0 0 0 4px rgba(207,114,48,.18)}
-.gate .ok{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:13px;line-height:1.45;color:#5b5148;margin:4px 0 20px;font-weight:400}
+.gate .ok{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:13px;line-height:1.45;color:#5b5148;margin:4px 0 14px;font-weight:400}
+.gate .ok+.btn{margin-top:8px}
 .gate .ok input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--braise)}
 .gate .btn{width:100%}
 .gate .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(23,19,15,.07);font-size:20px;cursor:pointer;color:var(--encre)}
@@ -286,6 +287,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .done2 .check{width:64px;height:64px;border-radius:50%;margin:6px auto 18px;display:grid;place-items:center;background:rgba(207,114,48,.14);color:var(--braise)}
 .done2 .check svg{width:30px;height:30px}
 
+
+.legal{padding:40px 0;background:#0f0b08;color:var(--ash-d)}
+.legal details{border:0}
+.legal summary{color:var(--ivoire);font-size:16px}
+.legal .lg{max-width:46em;padding-bottom:12px}
+.legal h3{font-size:15px;color:var(--ivoire);margin:20px 0 6px;letter-spacing:0}
+.legal p{font-size:14px;line-height:1.6;color:var(--ash-d);padding:0;margin:0 0 10px}
+
+.steps3{list-style:none;margin:-8px 0 20px;padding:0;display:grid;gap:10px}
+.steps3 li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;font-size:13.5px;line-height:1.45;color:#4f463e}
+.steps3 em,.how em{font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--braise);color:#fff;font-size:12px;font-weight:700}
+.how{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.how li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;padding:20px;border-radius:22px;background:var(--encre2);box-shadow:0 0 0 1px var(--line-d)}
+.how em{width:30px;height:30px;font-size:13px}
+.how b{display:block;font-size:15px;color:var(--ivoire);margin-bottom:4px}
+.how span{font-size:13.5px;color:var(--ash-d);line-height:1.45}
+@media(max-width:980px){.how{grid-template-columns:minmax(0,1fr)}}
 /* apparitions */
 .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -350,7 +368,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <p class="lead">Emberline lit tes données Garmin (sommeil, VFC, charge, Body Battery) et te prépare chaque matin une séance taillée pour ta forme. Gratuit, privé, installé en 10 minutes.</p>
     <div class="ctas">
       <a class="btn btn-p" href="#telecharger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger Emberline</a>
-      <button class="btn btn-g" type="button" data-video="fichiers/Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>Voir le film · 1 min 55</button>
+      <button class="btn btn-g" type="button" data-video="Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>Voir le film · 1 min 55</button>
     </div>
     <ul class="sports" aria-label="Sports couverts"><li>Course</li><li>Trail</li><li>Vélo</li><li>Natation</li><li>Muscu</li><li>Mobilité</li></ul>
   </div>
@@ -512,7 +530,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <p class="kick rv">Le film</p>
     <h2 class="h-l rv">Deux minutes pour <span class="fl">tomber dedans.</span></h2>
-    <button class="screen rv d1" type="button" data-video="fichiers/Emberline-Pub.mp4" aria-label="Lire la vidéo de présentation Emberline-Pub.mp4">
+    <button class="screen rv d1" type="button" data-video="Emberline-Pub.mp4" aria-label="Lire la vidéo de présentation Emberline-Pub.mp4">
       <img src="img/poster-pub.webp" alt="" loading="lazy">
       <span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span></span>
       <span class="cap">Emberline-Pub.mp4 · 1 min 55</span>
@@ -568,8 +586,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="done rv">
       <p><b>C'est fini.</b> Chaque heure, Emberline se met à jour tout seul. Le lendemain matin, ton coach est prêt. Le détail de chaque clic est dans la vidéo et le guide PDF.</p>
       <div class="acts">
-        <button class="btn btn-p" type="button" data-video="fichiers/Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>Vidéo d'installation</button>
-        <a class="btn btn-g" href="fichiers/Emberline-Installation.pdf" download data-dl>Guide PDF</a>
+        <button class="btn btn-p" type="button" data-video="Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>Vidéo d'installation</button>
+        <a class="btn btn-g" href="Emberline-Installation.pdf" download data-dl>Guide PDF</a>
       </div>
     </div>
   </div>
@@ -590,11 +608,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div>
         <h3>L'application Emberline</h3>
         <p class="fname">emberline_export_v1.zip</p>
-        <p class="muted">Archive ZIP · 4,5 Mo · à décompresser avant de déposer son contenu sur GitHub (étape 3).</p>
+        <p class="muted">Archive ZIP · 4,5 Mo · lien envoyé par e-mail après le formulaire. À décompresser avant de déposer son contenu sur GitHub (étape 3).</p>
       </div>
-      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</a>
+      <a class="btn btn-p" href="#telecharger" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</a>
     </div>
 
+
+    <ol class="how rv">
+      <li><em>1</em><div><b>Renseigne ton nom et ton e-mail</b><span>Clique « Télécharger », remplis le formulaire et accepte la licence.</span></div></li>
+      <li><em>2</em><div><b>Coche « Je ne suis pas un robot »</b><span>Une page de vérification s'ouvre un instant, puis tu reviens ici.</span></div></li>
+      <li><em>3</em><div><b>Ouvre le mail reçu</b><span>Il contient ton lien de téléchargement. Pense aux indésirables.</span></div></li>
+    </ol>
     <div class="groups">
       <div class="group rv">
         <h3>Installation</h3>
@@ -603,15 +627,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <div class="ft v"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg><small>MP4</small></div>
           <div><div class="fname">Emberline-Installation.mp4</div><div class="meta">Vidéo · 6 min 55 · 7,5 Mo</div></div>
           <div class="acts">
-            <button class="ib" type="button" data-video="fichiers/Emberline-Installation.mp4" aria-label="Regarder Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>
-            <a class="ib" href="fichiers/Emberline-Installation.mp4" download data-dl aria-label="Télécharger Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
+            <button class="ib" type="button" data-video="Emberline-Installation.mp4" aria-label="Regarder Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+            <a class="ib" href="Emberline-Installation.mp4" download data-dl aria-label="Télécharger Emberline-Installation.mp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
           </div>
         </div>
         <div class="file">
           <div class="ft p">PDF<small>7 P.</small></div>
           <div><div class="fname">Emberline-Installation.pdf</div><div class="meta">Guide imprimable · 7 pages · 771 Ko</div></div>
           <div class="acts">
-            <a class="ib" href="fichiers/Emberline-Installation.pdf" download data-dl aria-label="Télécharger Emberline-Installation.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
+            <a class="ib" href="Emberline-Installation.pdf" download data-dl aria-label="Télécharger Emberline-Installation.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
           </div>
         </div>
       </div>
@@ -622,15 +646,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <div class="ft v"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg><small>MP4</small></div>
           <div><div class="fname">Emberline-Pub.mp4</div><div class="meta">Vidéo de présentation · 1 min 55 · 3,2 Mo</div></div>
           <div class="acts">
-            <button class="ib" type="button" data-video="fichiers/Emberline-Pub.mp4" aria-label="Regarder Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>
-            <a class="ib" href="fichiers/Emberline-Pub.mp4" download data-dl aria-label="Télécharger Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
+            <button class="ib" type="button" data-video="Emberline-Pub.mp4" aria-label="Regarder Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+            <a class="ib" href="Emberline-Pub.mp4" download data-dl aria-label="Télécharger Emberline-Pub.mp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
           </div>
         </div>
         <div class="file">
           <div class="ft p">PDF<small>5 P.</small></div>
           <div><div class="fname">Emberline-Guide-utilisateur.pdf</div><div class="meta">Guide utilisateur · 5 pages · 3,2 Mo</div></div>
           <div class="acts">
-            <a class="ib" href="fichiers/Emberline-Guide-utilisateur.pdf" download data-dl aria-label="Télécharger Emberline-Guide-utilisateur.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
+            <a class="ib" href="Emberline-Guide-utilisateur.pdf" download data-dl aria-label="Télécharger Emberline-Guide-utilisateur.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
           </div>
         </div>
       </div>
@@ -660,39 +684,69 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <img class="rv" src="img/logo-ivoire.png" alt="Emberline" width="712" height="157" loading="lazy">
     <h2 class="h-xl rv d1">Garde la <span class="fl">flamme.</span></h2>
     <div class="ctas rv d2">
-      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger emberline_export_v1.zip</a>
+      <a class="btn btn-p" href="#telecharger" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger emberline_export_v1.zip</a>
       <a class="btn btn-g" href="#installer">Voir l'installation</a>
     </div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Emberline · Licence d'usage personnel</span><span>Emberline n'est pas un dispositif médical.</span></div></footer>
+<section class="band legal" id="legal">
+  <div class="wrap">
+    <details id="legal-d">
+      <summary>Mentions légales, propriété intellectuelle et licence d'usage</summary>
+      <div class="lg">
+        <h3>Éditeur</h3>
+        <p>Le site et l'application Emberline sont édités par Jordi Roubichou, à titre personnel et non commercial. Contact : jordi.roubichou@icloud.com. Hébergement : GitHub Pages, service de GitHub, Inc.</p>
+        <h3>Propriété intellectuelle</h3>
+        <p>Le nom Emberline, le logo, l'identité visuelle, les textes, les captures, les vidéos, les guides, le design de ce site, ainsi que le code source de l'application et l'ensemble de ses éléments sont la propriété intellectuelle exclusive de Jordi Roubichou et sont protégés par le Code de la propriété intellectuelle. Tous droits réservés.</p>
+        <p>Toute reproduction, représentation, adaptation, modification, traduction, extraction ou réutilisation, totale ou partielle, de ces éléments, par quelque procédé que ce soit, sans l'autorisation écrite préalable de Jordi Roubichou, est interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+        <h3>Licence d'usage personnel</h3>
+        <p>Le téléchargement d'emberline_export_v1.zip est soumis à l'acceptation de la licence d'usage personnel. Elle accorde un droit d'utilisation personnel, privé, non exclusif et non transférable : installer Emberline pour soi-même, sur son propre compte GitHub et avec son propre compte Garmin. Elle ne transfère aucun droit de propriété.</p>
+        <p>Sont interdits, sans l'accord écrit de l'auteur : la copie ou la réutilisation de tout ou partie du code, du design ou des contenus dans un autre projet, personnel ou professionnel ; la création d'une application ou d'un service dérivé ; la redistribution, la publication, la vente, la location ou la mise à disposition à des tiers ; la suppression ou le masquage des mentions d'auteur et de licence. Le texte complet figure dans le fichier LICENCE.txt de l'archive.</p>
+        <p>Emberline est fourni « tel quel », sans garantie. Ce n'est pas un dispositif médical et il ne remplace pas l'avis d'un professionnel de santé. Il se connecte à Garmin Connect par un moyen non officiel, que Garmin peut limiter à tout moment.</p>
+        <h3>Données personnelles</h3>
+        <p>Le nom et l'adresse e-mail saisis avant le téléchargement sont transmis par e-mail à Jordi Roubichou via le service FormSubmit, pour savoir qui utilise l'app et pouvoir faire respecter la licence. Ils ne sont ni revendus ni utilisés à des fins publicitaires. Tu peux demander à les consulter ou à les faire supprimer en écrivant à jordi.roubichou@icloud.com.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© 2026 Jordi Roubichou. Tous droits réservés. · <a href="#legal" data-legal style="color:inherit">Mentions légales et licence</a></span><span>Emberline n'est pas un dispositif médical.</span></div></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
   <button class="x" type="button" aria-label="Fermer la vidéo">×</button>
   <video id="vid" controls playsinline preload="none"></video>
 </div>
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-t">
-  <form id="gate-f" novalidate>
+  <form id="gate-f" method="POST" action="https://formsubmit.co/jordi.roubichou@icloud.com" novalidate>
     <button class="x" type="button" aria-label="Fermer">×</button>
     <div class="fields">
       <div class="gi" aria-hidden="true"></div>
       <h3 id="gate-t">Télécharger <span class="fl">Emberline</span></h3>
-      <p class="sub2">Laisse ton nom et ton e-mail, le téléchargement de emberline_export_v1.zip démarre aussitôt.</p>
+      <p class="sub2">Le lien de téléchargement t'est envoyé par e-mail. Trois étapes :</p>
+      <ol class="steps3"><li><em>1</em>Renseigne ton nom et ton e-mail, coche les deux cases, clique « Recevoir le lien ».</li><li><em>2</em>Sur la page qui s'ouvre, coche « Je ne suis pas un robot ». Tu reviens ensuite ici.</li><li><em>3</em>Ouvre le mail reçu (expéditeur FormSubmit, regarde aussi dans les indésirables) et clique sur le lien pour télécharger emberline_export_v1.zip.</li></ol>
       <label for="g-name">Nom</label>
-      <input type="text" id="g-name" name="name" autocomplete="name" required maxlength="80" placeholder="Prénom Nom">
+      <input type="text" id="g-name" name="Nom" autocomplete="name" required maxlength="80" placeholder="Prénom Nom">
       <label for="g-mail">E-mail</label>
       <input type="email" id="g-mail" name="email" autocomplete="email" required maxlength="120" placeholder="toi@exemple.fr">
+      <input type="hidden" name="_subject" id="g-subj" value="Emberline : nouvelle demande de téléchargement">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://jordiroubichou-cyber.github.io/emberline-public/#verifie">
+      <input type="hidden" name="_autoresponse" value="Bonjour, merci pour ton intérêt pour Emberline ! Voici ton lien pour télécharger l'application (emberline_export_v1.zip) : https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip — Ensuite, suis le guide d'installation pas à pas : https://jordiroubichou-cyber.github.io/emberline-public/#installer — Rappel : en téléchargeant Emberline, tu t'es engagé à respecter la licence d'usage personnel (pas de copie, de réutilisation ni de redistribution du code). Garde la flamme ! Jordi">
+      <input type="hidden" name="Date" id="g-date" value="">
+      <input type="hidden" name="Licence d'usage personnel" value="Acceptée (engagement de non-copie et de non-réutilisation du code)">
+      <input type="hidden" name="Données" value="Consentement donné">
       <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="ok"><input type="checkbox" id="g-ok" required><span>J'accepte que mon nom et mon e-mail soient transmis à Jordi, créateur d'Emberline, pour savoir qui utilise l'app. Ils ne sont ni revendus ni utilisés pour de la publicité.</span></label>
-      <button class="btn btn-p" type="submit" id="g-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</button>
+      <label class="ok"><input type="checkbox" id="g-lic" required><span>Je m'engage à utiliser Emberline pour mon seul usage personnel, conformément à la <a class="link" href="#legal" data-legal>licence d'usage</a>. Je ne copierai pas, ne réutiliserai pas dans mes propres projets, ne modifierai pas pour en faire un autre produit et ne redistribuerai pas tout ou partie du code, du design ou des contenus d'Emberline, propriété intellectuelle exclusive de Jordi Roubichou.</span></label>
+      <label class="ok"><input type="checkbox" id="g-ok" required><span>J'accepte que mon nom et mon e-mail soient transmis à Jordi Roubichou, créateur d'Emberline, pour savoir qui utilise l'app. Ils ne sont ni revendus ni utilisés pour de la publicité.</span></label>
+      <button class="btn btn-p" type="submit" id="g-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Recevoir le lien</button>
       <p class="err" id="g-err" role="alert"></p>
     </div>
     <div class="done2">
       <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-      <h3>C'est parti !</h3>
-      <p class="sub2">Le téléchargement de emberline_export_v1.zip a démarré. Rien ne se passe ? <a class="link" id="g-again" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip">Relancer</a>.</p>
+      <h3>Vérifie ta boîte mail</h3>
+      <p class="sub2">Ton lien pour télécharger emberline_export_v1.zip vient d'être envoyé<span id="g-to"></span>. Il arrive en général en moins d'une minute, de la part de FormSubmit. Rien reçu ? Regarde dans les indésirables, ou <a class="link" href="#telecharger" id="g-retry">refais une demande</a>.</p>
       <a class="btn btn-p" href="#installer" id="g-next">Voir l'installation</a>
     </div>
   </form>
@@ -796,8 +850,7 @@ $$('[data-dl]').forEach(a => a.addEventListener('click', async e => {
 }));
 
 /* formulaire avant téléchargement : envoi par FormSubmit, puis téléchargement */
-const ZIP = "https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip", FORM_URL = "https://formsubmit.co/ajax/jordi.roubichou@icloud.com";
-const gate = $('#gate'), gf = $('#gate-f'), gErr = $('#g-err'), gName = $('#g-name'), gMail = $('#g-mail'), gOk = $('#g-ok'), gGo = $('#g-go');
+const gate = $('#gate'), gf = $('#gate-f'), gErr = $('#g-err'), gName = $('#g-name'), gMail = $('#g-mail'), gOk = $('#g-ok'), gLic = $('#g-lic'), gGo = $('#g-go');
 let lastFocus = null;
 try { const m = JSON.parse(localStorage.getItem('emb-dl') || '{}'); if (m.n) gName.value = m.n; if (m.e) gMail.value = m.e; } catch (e) {}
 const openG = () => { lastFocus = document.activeElement; gate.classList.remove('sent'); gErr.textContent = ''; gate.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => (gName.value ? gMail : gName).focus(), 60); };
@@ -806,26 +859,32 @@ $$('[data-gate]').forEach(a => a.addEventListener('click', e => { e.preventDefau
 gate.addEventListener('click', e => { if (e.target === gate || e.target.classList.contains('x')) closeG(); });
 $('#g-next').addEventListener('click', closeG);
 addEventListener('keydown', e => { if (e.key === 'Escape' && gate.classList.contains('open')) closeG(); });
+
+$$('[data-legal]').forEach(a => a.addEventListener('click', e => { const d = $('#legal-d'); if (d) d.open = true; if (gate.classList.contains('open')) { e.preventDefault(); closeG(); setTimeout(() => $('#legal').scrollIntoView({ behavior: RM ? 'auto' : 'smooth' }), 50); } }));
 gf.addEventListener('submit', async e => {
   e.preventDefault();
   const name = gName.value.trim(), email = gMail.value.trim();
   if (name.length < 2) { gErr.textContent = 'Indique ton nom.'; gName.focus(); return; }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { gErr.textContent = 'Cette adresse e-mail ne semble pas valide.'; gMail.focus(); return; }
-  if (!gOk.checked) { gErr.textContent = 'Coche la case pour continuer.'; return; }
+  if (!gLic.checked) { gErr.textContent = 'Accepte la licence d\u2019usage pour continuer.'; return; }
+  if (!gOk.checked) { gErr.textContent = 'Coche la case sur tes données pour continuer.'; return; }
   if (gf._honey.value) return;
   gErr.textContent = ''; gGo.disabled = true; gGo.lastChild.textContent = 'Envoi…';
   try { localStorage.setItem('emb-dl', JSON.stringify({ n: name, e: email })); } catch (err) {}
-  const when = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
-  try {
-    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 8000);
-    await fetch(FORM_URL, { method: 'POST', signal: ctl.signal, headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ _subject: 'Emberline : téléchargement par ' + name, _template: 'table', _captcha: 'false', Nom: name, 'E-mail': email, Date: when, Fichier: 'emberline_export_v1.zip' }) });
-    clearTimeout(t);
-  } catch (err) { /* service injoignable : on ne bloque pas le téléchargement */ }
-  gGo.disabled = false; gGo.lastChild.textContent = 'Télécharger';
-  gate.classList.add('sent');
-  location.href = ZIP;
+  $('#g-subj').value = 'Emberline : demande de téléchargement par ' + name;
+  $('#g-date').value = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+  HTMLFormElement.prototype.submit.call(gf);
 });
+/* retour depuis FormSubmit : afficher « Vérifie ta boîte mail » */
+const showSent = () => {
+  if (location.hash !== '#verifie') return;
+  let e = ''; try { e = JSON.parse(localStorage.getItem('emb-dl') || '{}').e || ''; } catch (err) {}
+  $('#g-to').textContent = e ? ' à ' + e : '';
+  openG(); gate.classList.add('sent');
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {}
+};
+$('#g-retry').addEventListener('click', e => { e.preventDefault(); gate.classList.remove('sent'); });
+showSent(); addEventListener('hashchange', showSent);
 }
 </script>
 </body>
