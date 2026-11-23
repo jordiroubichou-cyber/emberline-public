@@ -264,6 +264,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);z-index:120;background:var(--encre);color:var(--ivoire);padding:12px 18px;border-radius:14px;font-size:14px;box-shadow:0 20px 40px -10px rgba(0,0,0,.5);transition:transform .45s var(--ease);max-width:calc(100vw - 32px)}
 .toast.show{transform:translate(-50%,0)}
 
+
+/* formulaire de téléchargement */
+.gate{position:fixed;inset:0;z-index:110;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(10,8,6,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.gate.open{display:flex;animation:fade .3s ease}
+.gate form{position:relative;width:min(440px,100%);max-height:calc(100svh - 32px);overflow:auto;background:var(--ivoire);color:var(--encre);border-radius:28px;padding:32px 28px 26px;box-shadow:0 40px 100px -30px rgba(207,114,48,.55);animation:rise .5s var(--ease)}
+.gate .gi{width:56px;height:56px;border-radius:16px;background:url(img/icone.png) center/cover;margin-bottom:18px;box-shadow:0 12px 26px -10px rgba(207,114,48,.7)}
+.gate h3{font-size:26px;line-height:1.1;margin-bottom:6px}
+.gate .sub2{font-size:15px;color:var(--ash);margin-bottom:22px}
+.gate label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+.gate input[type=text],.gate input[type=email]{width:100%;height:50px;border-radius:14px;border:1px solid rgba(23,19,15,.16);background:#fff;padding:0 16px;font:16px Inter,sans-serif;color:var(--encre);margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.gate input:focus{outline:0;border-color:var(--braise);box-shadow:0 0 0 4px rgba(207,114,48,.18)}
+.gate .ok{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:13px;line-height:1.45;color:#5b5148;margin:4px 0 20px;font-weight:400}
+.gate .ok input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--braise)}
+.gate .btn{width:100%}
+.gate .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(23,19,15,.07);font-size:20px;cursor:pointer;color:var(--encre)}
+.gate .err{font-size:13px;color:#a8361a;min-height:18px;margin-top:10px;text-align:center}
+.gate .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.gate .done2{text-align:center;display:none}
+.gate.sent .fields{display:none}.gate.sent .done2{display:block}
+.done2 .check{width:64px;height:64px;border-radius:50%;margin:6px auto 18px;display:grid;place-items:center;background:rgba(207,114,48,.14);color:var(--braise)}
+.done2 .check svg{width:30px;height:30px}
+
 /* apparitions */
 .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -570,7 +592,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <p class="fname">emberline_export_v1.zip</p>
         <p class="muted">Archive ZIP · 4,5 Mo · à décompresser avant de déposer son contenu sur GitHub (étape 3).</p>
       </div>
-      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</a>
+      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</a>
     </div>
 
     <div class="groups">
@@ -638,7 +660,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <img class="rv" src="img/logo-ivoire.png" alt="Emberline" width="712" height="157" loading="lazy">
     <h2 class="h-xl rv d1">Garde la <span class="fl">flamme.</span></h2>
     <div class="ctas rv d2">
-      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger emberline_export_v1.zip</a>
+      <a class="btn btn-p" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip" data-gate><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger emberline_export_v1.zip</a>
       <a class="btn btn-g" href="#installer">Voir l'installation</a>
     </div>
   </div>
@@ -650,6 +672,30 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
   <button class="x" type="button" aria-label="Fermer la vidéo">×</button>
   <video id="vid" controls playsinline preload="none"></video>
+</div>
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-t">
+  <form id="gate-f" novalidate>
+    <button class="x" type="button" aria-label="Fermer">×</button>
+    <div class="fields">
+      <div class="gi" aria-hidden="true"></div>
+      <h3 id="gate-t">Télécharger <span class="fl">Emberline</span></h3>
+      <p class="sub2">Laisse ton nom et ton e-mail, le téléchargement de emberline_export_v1.zip démarre aussitôt.</p>
+      <label for="g-name">Nom</label>
+      <input type="text" id="g-name" name="name" autocomplete="name" required maxlength="80" placeholder="Prénom Nom">
+      <label for="g-mail">E-mail</label>
+      <input type="email" id="g-mail" name="email" autocomplete="email" required maxlength="120" placeholder="toi@exemple.fr">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="ok"><input type="checkbox" id="g-ok" required><span>J'accepte que mon nom et mon e-mail soient transmis à Jordi, créateur d'Emberline, pour savoir qui utilise l'app. Ils ne sont ni revendus ni utilisés pour de la publicité.</span></label>
+      <button class="btn btn-p" type="submit" id="g-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Télécharger</button>
+      <p class="err" id="g-err" role="alert"></p>
+    </div>
+    <div class="done2">
+      <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3>C'est parti !</h3>
+      <p class="sub2">Le téléchargement de emberline_export_v1.zip a démarré. Rien ne se passe ? <a class="link" id="g-again" href="https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip">Relancer</a>.</p>
+      <a class="btn btn-p" href="#installer" id="g-next">Voir l'installation</a>
+    </div>
+  </form>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -748,6 +794,38 @@ $$('[data-dl]').forEach(a => a.addEventListener('click', async e => {
     else say('Le téléchargement n\'a pas pu démarrer ici. Réessaie dans un instant.');
   }
 }));
+
+/* formulaire avant téléchargement : envoi par FormSubmit, puis téléchargement */
+const ZIP = "https://github.com/jordiroubichou-cyber/emberline-public/releases/download/Emberline_v1/emberline_export_v1.zip", FORM_URL = "https://formsubmit.co/ajax/jordi.roubichou@icloud.com";
+const gate = $('#gate'), gf = $('#gate-f'), gErr = $('#g-err'), gName = $('#g-name'), gMail = $('#g-mail'), gOk = $('#g-ok'), gGo = $('#g-go');
+let lastFocus = null;
+try { const m = JSON.parse(localStorage.getItem('emb-dl') || '{}'); if (m.n) gName.value = m.n; if (m.e) gMail.value = m.e; } catch (e) {}
+const openG = () => { lastFocus = document.activeElement; gate.classList.remove('sent'); gErr.textContent = ''; gate.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => (gName.value ? gMail : gName).focus(), 60); };
+const closeG = () => { gate.classList.remove('open'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); };
+$$('[data-gate]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openG(); }));
+gate.addEventListener('click', e => { if (e.target === gate || e.target.classList.contains('x')) closeG(); });
+$('#g-next').addEventListener('click', closeG);
+addEventListener('keydown', e => { if (e.key === 'Escape' && gate.classList.contains('open')) closeG(); });
+gf.addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = gName.value.trim(), email = gMail.value.trim();
+  if (name.length < 2) { gErr.textContent = 'Indique ton nom.'; gName.focus(); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { gErr.textContent = 'Cette adresse e-mail ne semble pas valide.'; gMail.focus(); return; }
+  if (!gOk.checked) { gErr.textContent = 'Coche la case pour continuer.'; return; }
+  if (gf._honey.value) return;
+  gErr.textContent = ''; gGo.disabled = true; gGo.lastChild.textContent = 'Envoi…';
+  try { localStorage.setItem('emb-dl', JSON.stringify({ n: name, e: email })); } catch (err) {}
+  const when = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+  try {
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 8000);
+    await fetch(FORM_URL, { method: 'POST', signal: ctl.signal, headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ _subject: 'Emberline : téléchargement par ' + name, _template: 'table', _captcha: 'false', Nom: name, 'E-mail': email, Date: when, Fichier: 'emberline_export_v1.zip' }) });
+    clearTimeout(t);
+  } catch (err) { /* service injoignable : on ne bloque pas le téléchargement */ }
+  gGo.disabled = false; gGo.lastChild.textContent = 'Télécharger';
+  gate.classList.add('sent');
+  location.href = ZIP;
+});
 }
 </script>
 </body>
